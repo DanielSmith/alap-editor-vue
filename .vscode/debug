@@ -1,0 +1,46 @@
+
+
+I like automatic transmission..
+I like tools that enable other tools..
+
+ted nelson quote ..  how many of you drive a stickshift?  you peopel shoudl not be  desigining software!
+
+articvel .. css... taking a purist view.. write css and dont use   utility classes.. such as tailwind
+
+yeah.. but..
+
+same for saying werite plain vanilla js.. and dont use vue, angular, or react..
+
+or write a node app and dont use express..
+
+or use mongo but skip on mongoose...
+
+or do 3d webgl stuff and skip on using Three.js...
+
+I  could struggle with  endlessly configuring Webpack.. or.. I can use vite or parcel
+to drive my dev and build processs..
+
+.. and this extends into the cloud...   I can do some straightforward serverless things with netlify ,
+or.... I can do the same with AWS.. but it takes jumping through MANY more hoops...
+I could set up an EC2 instance from scratch.. but.. it's easier to spin up a docker instance.. etc etc..
+...
+
+when we build on top of good tools, we can get more done in a given amoutn of time...
+
+a tool like tailwind lets me do things with css that would take me much longer to do otherwise...
+
+does the end user care?  they get to see something ship that much quicker, and it looks good and works well 
+for them
+
+this is a good thing...
+...
+you can be a purist, and insist on doing the bare metal approach for everything.. no automatic trans ..
+the clutch.. the stickshift..
+the assembly language approach...  it could be a nice mountaintop to camp out on...  it's artisinal.. but your
+customers.. your clients. .. they wont get to see your work for a long long time..
+...
+so .. in the end.. it's a balance././ you pick and choose what you are going to write as a custom bit.. wherever.. client or server 
+side... and you put a certain amount of trust in all your tools to fill in the gaps... if you 
+choose well..you get to ship something that much quicker,   your app or your site is reasonably fast,
+ works well, and  your end users are happy
+
