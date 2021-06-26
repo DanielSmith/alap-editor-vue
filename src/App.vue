@@ -57,7 +57,7 @@
 
 <script>
 // may not need provide
-import { reactive, ref, watch, provide } from "vue";
+import { reactive, ref, provide } from "vue";
 import { useAlapStore } from "./stores/alap";
 import Alap from "./components/Alap.vue";
 import EditForm from "./components/EditForm.vue";
@@ -111,6 +111,12 @@ export default {
     const addNewEntry = () => {
       const curEntryItem = reactive(Object.create(editEntryItem));
       curEntryItem.id = entryCounter++;
+
+      // we want to start out with something unique
+      // the user gets a chance to edit this
+      // if they happen to save this name, it cant be edited after...
+      // however, they can clone a new item, edit that, and delete
+      // the original
       curEntryItem.itemID = "_a_new_item_" + suid();
       curEntryItem.originalItemID = curEntryItem.itemID;
       curEntryItem.newItem = true;
@@ -119,12 +125,7 @@ export default {
       allEditEntries.value.unshift(curEntryItem);
 
       saveData();
-
       return curEntryItem;
-    };
-
-    const removeSample = (id) => {
-      allSampleEntries.value = allSampleEntries.value.filter((cur) => cur !== id);
     };
 
     // do the right thing for clone and new items.. as well as dragged in..
@@ -190,11 +191,8 @@ export default {
     };
 
     const editEntry = (item, event) => {
-      // alapStore.count++;
-
       // are we already editing this?
       if (theEditSet.has(item)) {
-        console.log("we know " + item);
         return false;
       }
 

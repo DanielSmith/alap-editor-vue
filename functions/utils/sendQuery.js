@@ -2,9 +2,6 @@ const axios = require("axios");
 require("dotenv").config();
 
 module.exports = async (query, variables) => {
-  console.dir(query);
-  console.dir(variables);
-
   const {
     data: { data, errors },
   } = await axios({

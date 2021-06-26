@@ -1,4 +1,5 @@
-import { createPinia, defineStore } from "pinia";
+// usiing the Pinia store for globally shared state
+import { defineStore } from "pinia";
 
 export const useAlapStore = defineStore({
   id: "alapstore",
@@ -29,6 +30,7 @@ export const useAlapStore = defineStore({
   },
 
   getters: {
+    // TK
     getKeys() {
       return Object.keys(this.alapData.allLinks);
     },

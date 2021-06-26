@@ -52,8 +52,6 @@ export default {
     const originalItemID = props.editInfo.originalItemID || "";
 
     const formSubmit = (editInfo) => {
-      console.log(editInfo.label);
-      console.log(editInfo.url);
       let originalItemID = "";
 
       if (editInfo.originalItemID) {
@@ -92,7 +90,6 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
+/* TK */
 </style>

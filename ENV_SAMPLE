@@ -1,0 +1,3 @@
+# use your own Fauna API key, and copy this to
+# the .env in the project root
+FAUNA_SECRET_KEY="YOUR_FAUNADB_API_KEY"

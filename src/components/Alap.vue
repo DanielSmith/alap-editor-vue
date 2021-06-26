@@ -10,10 +10,8 @@
 
 
 <script setup>
-import { onMounted, defineProps, watch, watchEffect, ref, inject } from "vue";
+import { onMounted, defineProps, watch, ref, inject } from "vue";
 import alap from "alap";
-
-import axios from "axios";
 
 const props = defineProps({
   alapConfig: Object,
@@ -26,6 +24,7 @@ const styleObject = ref({
   left: 0,
 });
 
+// may be able to get rid of this
 const curData = ref("unknown");
 
 let curTimerID = null;
@@ -77,23 +76,17 @@ const startTimer = () => {
     clearTimeout(curTimerID);
   }
   curTimerID = setTimeout(removeMenu, menuTimeout);
-
-  console.log("start timer");
 };
 
 const stopTimer = () => {
   clearTimeout(curTimerID);
   curTimerID = null;
-  console.log("stop timer");
 };
 
 watch(
   () => mev.count,
   (_1, _2) => {
     const myattr = { ...mev };
-
-    console.dir(myattr);
-    // console.dir(styleObject.value);
 
     showAlapElem.value = true;
 
@@ -112,41 +105,15 @@ watch(
 
       styleObject.value.top = ed.value.offset.top + "px";
       styleObject.value.left = ed.value.offset.left + "px";
-      console.dir(ed.value);
-
       curData.value = ed.theData;
     }
-
-    // const rect = el.getBoundingClientRect(),
   }
 );
 
-// watch(mev, (newVal, oldVal) => {
-//   console.log("Watch called with args:", { ...newVal }, { ...oldVal });
-// });
-
 onMounted(() => {
-  // console.log(myPara.value);
-  // console.dir({ ...props });
   myAlap = new alap();
   myAlap.configure({ ...props.alapConfig }, "vue");
-  // showAlapElem = true;
-
   myAlap.dumpConfig();
-
-  const dls = async () => {
-    const res = await fetch("/.netlify/functions/hello");
-
-    try {
-      // const res = await fetch("/api/helloWorld");
-      const res = await fetch("/.netlify/functions/hello");
-      // const links = await res.json();
-      console.log("hel;llll");
-      console.dir(res);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 });
 </script>
 

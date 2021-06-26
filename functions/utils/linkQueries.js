@@ -1,49 +1,47 @@
-const GET_LINKS = `
+// need to figure this one out..
+const GET_CONFIG = `
 # Write your query or mutation here
 query{
   allLinks{
     data {
-      name
       _id
-      url
-      description
-      archived
+      name
+      jsondata
     }
   }
 }`;
 
-const CREATE_LINK = `
-    mutation($name: String!, $jsondata: String! ) {
-        createAlapConfig( data: { name:$name, jsondata:$jsondata }) {
-          name
-          jsondata
-        }
+const CREATE_CONFIG = `
+  mutation($name: String!, $jsondata: String! ) {
+    createAlapConfig( data: { name:$name, jsondata:$jsondata }) {
+      name
+      jsondata
     }
+  }
 `;
 
-const UPDATE_LINK = `
-  mutation($id: ID!, $archived: Boolean!, $name: String!, $url: String!, $description: String!  ) {
-    updateAlapConfig( id: $id, data: { name:$name, url: $url, description: $description, archived: $archived }) {
-            name
-            _id
-            url
-            description
-            archived
-        }
-    }
+// not using yet
+const UPDATE_CONFIG = `
+mutation($id: ID!, $name: String!, $jsondata: String! ) {
+  updateAlapConfig( id: $id, data: { name:$name, jsondata:$jsondata }) {
+    name
+    jsondata
+  }
+}
+// not using yet
 `;
 
-const DELETE_LINK = `
+const DELETE_CONFIG = `
   mutation($id: ID!) {
-        deleteLink( id: $id) {
-            _id
-        }
+    deleteAlapConfig( id: $id) {
+      _id
     }
+  }
 `;
 
 module.exports = {
-  GET_LINKS,
-  CREATE_LINK,
-  UPDATE_LINK,
-  DELETE_LINK,
+  GET_CONFIG,
+  CREATE_CONFIG,
+  UPDATE_CONFIG,
+  DELETE_CONFIG,
 };

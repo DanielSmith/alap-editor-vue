@@ -1,10 +1,9 @@
-type Link {
-    url: String!
-    name: String!
-    description: String!
-    archived: Boolean
+type AlapConfig {
+  name: String!
+  jsondata: String!
 }
 
 type Query {
-    allLinks: [Link!]!
+  allConfigs: [AlapConfig!]!
+  configByPage(name: String!): [AlapConfig!]
 }
