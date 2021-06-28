@@ -1,3 +1,6 @@
 # use your own Fauna API key, and copy this to
 # the .env in the project root
+# NOTE: this is not important until I circle
+# back and update the serverless functions to
+# use FQL
 FAUNA_SECRET_KEY="YOUR_FAUNADB_API_KEY"

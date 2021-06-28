@@ -5,7 +5,7 @@
 export const alapConfig = {
   settings: {
     listType: "ul",
-    menuTimeout: 15000,
+    menuTimeout: 3000,
   },
 
   macros: {

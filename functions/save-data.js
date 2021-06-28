@@ -1,3 +1,12 @@
+// save-data.js
+// ignore this...
+// going to update this when I do
+// the react version (since it is a serverless
+// function, this will be updated then)
+
+// I am going to redo this as FQL...
+// I want to be able to update, or create if needed
+
 const axios = require("axios");
 require("dotenv").config();
 const { CREATE_CONFIG } = require("./utils/linkQueries.js");
