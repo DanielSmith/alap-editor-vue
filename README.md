@@ -62,6 +62,7 @@ I've learned things from doing this Vue version that will inform how I do the Re
 ## Acknowledgements
 
  - [James Q Quick - JAMstack demo](https://github.com/jamesqquick/JAMstack-Crash-Course-Build-a-Fullstack-App-with-React-Serverless-and-FaunaDB) - got some GraphQL insight from this one
+ - [Ania Kubów, Youtube](https://www.youtube.com/watch?v=n_KASTN0gUE) - Got me going on Netlify Serverless
 
   
 ## License
